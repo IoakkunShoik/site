@@ -1,11 +1,10 @@
 <?php
-namespace root;
-require_once 'view/instructions.php';
+
+require_once 'controller/main_controller.php';
+
 class main{
     function __construct(){
         
     }
 }
-
-$p = new main();
-$a = new \root\view\view();
+$a = new \root\controller\main_controller();        //подключить контроллер
