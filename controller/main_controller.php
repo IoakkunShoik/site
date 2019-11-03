@@ -18,16 +18,14 @@ class main_controller{
             $this->page_index($page);
             return;
         }
+        
         foreach(get_class_methods($this) as $i){
             if($i == 'page_'.$_GET['page']){
                 $this->$call($page);
-                break;
-            }else{
-                echo "404 страница не найдена :(";
                 return;
-            }
+            }           
         }
-        
+        echo "404 страница не найдена :(";
         
         
     }

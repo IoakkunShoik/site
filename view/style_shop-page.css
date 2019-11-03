@@ -14,11 +14,20 @@ body{
     background-color: #444444;
     color: #ffaa00;
     font-size: 2vw;
+    padding: 0;
 }
 .button{
+
     font-family: 'Philosopher', sans-serif;
     margin: 1vw;
 }
 .title{
+    background-image: url("http://shop-art-jako.ru/view/imgs/title.png");
+    background-size: 15vw;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    color: rgba(0,0,0,0);
     flex-grow: 1;
+    margin: 0;
+    padding: 0;
 }

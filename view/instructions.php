@@ -1,6 +1,6 @@
 <?php 
 namespace root\view;
-
+//antiquar
 class view{
     function base_template(){
         $page = file_get_contents('http://'.$_SERVER['HTTP_HOST'].'/view/shop-page.html');
