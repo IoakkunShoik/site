@@ -3,7 +3,8 @@ namespace root\controller;
 require_once 'view/instructions.php';
 
 class main_controller{
-    private function page_index($page){
+
+    private function page_index($page){   
         return $page->render('это главная страница');
     }
     private function page_shop($page){
@@ -11,15 +12,23 @@ class main_controller{
     }
 
     function __construct(){
-        $page = new \root\view\view();         
-        switch ($_GET["page"])
-        {
-            case 'index': $this->page_index($page);break;
-            case  'shop': $this->page_shop($page);break;
-            default:{echo $_GET['page'];
-                $this->page_index();}
-            
+        $page = new \root\view\view();  
+        $call = "page_".$_GET['page'];
+        if(!$_GET['page']){
+            $this->page_index($page);
+            return;
         }
+        foreach(get_class_methods($this) as $i){
+            if($i == 'page_'.$_GET['page']){
+                $this->$call($page);
+                break;
+            }else{
+                echo "404 страница не найдена :(";
+                return;
+            }
+        }
+        
+        
         
     }
 
