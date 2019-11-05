@@ -1,14 +1,17 @@
 <?php
 namespace root\controller;
 require_once 'view/instructions.php';
-
+require_once 'model/tables.php';
 class main_controller{
 
-    private function page_index($page){   
+    private function page_index($page){
+
         return $page->render('это главная страница');
     }
     private function page_shop($page){
-        return $page->render('Это страница магазина');
+        $output = new \root\model\tables();
+        
+        return $page->render($output->Articles());
     }
 
     function __construct(){
