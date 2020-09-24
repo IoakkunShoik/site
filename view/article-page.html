@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="article">
+                <div class="header"><h1>$$$NAME$$$</h1></div>
+                <div class="left-panel">
+                    <div class="image">
+                        <img class="my-foto" src="$$$IMAGE$$$" alt="" width="500">
+                        <div class="view-panel">$$$IMAGES$$$</div>
+                        
+                    </div>
+                    <div class="discription">$$$DISCRIPTION$$$</div>
+                </div>
+                <div class="right-panel">
+                    <div class="chars">$$$CHARS$$$</div>
+                    <div class="paying">$$$PAYING$$$</div>
+                </div>
+            </div>
+            
+         
+            <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+            <script src="/view/scripts/zoomsl-3.0.min.js"></script>
+            <script>
+                 jQuery(function(){
+   
+                $(".my-foto").imagezoomsl({
+     
+                  innerzoommagnifier: true,
+      classmagnifier: window.external ? window.navigator.vendor === "Yandex" ? "" : "round-loupe" : "",
+      magnifierborder: "5px solid #F0F0F0",                               // fix для Opera, Safary, Yandex		  
+      zoomrange: [2, 8],
+      zoomstart: 4,
+      magnifiersize: [150, 150]		
+          });
+      });  
+            </script>
+</body>
+
+</html>

@@ -2,21 +2,69 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <link rel="stylesheet" href="$$$WHEREAMI$$$/style_shop-page.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <title>Ivan & Marya</title>
         
         <link href="https://fonts.googleapis.com/css?family=Philosopher&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+SC&display=swap" rel="stylesheet">
     </head>
     <body>
+
+        <!--Top panel-->
         <div class="hat">
             <div class="title">Иван да Марья</div>
-            <div class="button">Кнопка1</div>
-            <div class="button">Кнопка2</div>
-            <div class="button">Кнопка3</div>
-            <div class="button">Кнопка4</div>
-            <div class="button">Кнопка5</div>
+            <div class="button mainpage"><a href="?">Главная</a></div>
+            <div class="button shop"><a class='intoshop'  href="?page=shop">Магазин</a></div>
+            <div class="button buttonwpoint search">Поиск <br> ...</div>
+            <div class="button buttonwpoint filters">Фильтры <br> ...</div>
+            <div class="button cart"><a href="?page=cart">Корзина</a></div>
         </div>
+
+        <!--Form of Search-->
+        <div class="searchform">
+            <form action="?page=shop">
+                <input type="hidden" name='page' value='shop'>
+                <input type="text" name='search' placeholder='search'>
+                <input type="image" src="$$$WHEREAMI$$$/imgs/search.png" value="search">
+            </form>
+        </div>
+
+        <!--Form of filters-->
+        <div class="filterform">
+            <form>
+            <input type="hidden" name='page' value='shop'>
+            <table>
+              <tr><td><p>Категории:</p></td><td>Цена:</td><td>Сортировать по:</td></tr>
+
+              <tr>
+                  <td><input id='filt1' type="radio" name="category" value='' checked><label for='filt1'>Всё</label for='filt'></td>
+                  <td><input type="number" name="price_from" placeholder="от">                                      </td>
+                  <td><input id='filt2' type="radio" name="sort" value='' checked><label for='filt2'>Всё</label></td>
+                </tr>
+
+              <tr class='border'>
+                  <td><input id='filt3' type="radio" name="category" value='Curtains'><label for='filt3'>Шторы</input></label></td>
+                  <td><input type="number" name="price_to" placeholder="до">                                             </td>
+                  <td><input id='filt4' type="radio" name="sort" value=''><label for='filt4'>Всё</label>       </td>
+                </tr> 
+
+              <tr>
+                  <td><input id='filt5' type="radio" name="category" value='cornice'><label for='filt5'>Карнизы</label></td>
+                </tr>
+                
+                <p><input type="submit" value='Найти'></p>
+            </table>
+            </form>
+        </div>
+
+        <!--Content section-->
         <div class="content">
             $$$CONTENT$$$
         </div>
-        <div class="footer"></div>
+
+        
     </body>
+
+    <script src="$$$WHEREAMI$$$/scripts/shop-page.js"></script>
+    <script src="$$$WHEREAMI$$$/scripts/to_cart.js"></script>
 </html>

@@ -1,0 +1,106 @@
+.Article{
+    display: inline-block;
+    margin-top : 1vw;
+    margin-left: 0;
+    background-color: grey;
+    height: 30vw;
+    width: 25vw;
+    border-radius: 2px 10px;
+    box-shadow: 0px 0px 5px 0px black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Cormorant SC', serif;
+    font-size: 1.5vw;
+}
+
+#image{
+    height:50%;
+    display:flex;
+    justify-content: center;
+}
+#discription{
+    
+    background-color: #eee;
+     height: 50%;
+     opacity:0;
+     transition:1s;
+     border-radius: 0px 0px 2px 10px;
+     overflow: hidden ;
+}
+#text{
+    height: 65%; padding:5%;
+    font-size: 1.5vw;
+
+}
+#price{
+    text-align: right; margin-right: 5%;
+    opacity: 1;
+    font-size: 1.5vw;
+
+}
+#more{
+    background-position: center;
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+    margin: 0;
+    background-size: 40%;
+    opacity: 0;
+    background-image: url("$$$MORE$$$");
+    transition:1s;
+    background-repeat: no-repeat;
+    border-radius: 2px 0px 0px 0px;
+    font-size: 1.5vw;
+
+
+}
+#tcart{
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    width:50%;
+    display: inline-block;
+    background-size: 40%;
+    background-image: url("$$$TCART$$$");
+    opacity: 0;
+    background-repeat: no-repeat;
+    transition:1s;
+    border-radius: 0px 10px 0px 0px;
+    cursor: pointer;
+    transition: 1s;
+}
+#tcart:active{
+    background-size: 200%;
+}
+.Article:hover #tcart{
+    background-color: rgba(200, 200, 200, 0.3);
+    opacity: 1;    
+    transition:1s;
+    
+}
+.Article:hover #more{
+    background-color: rgba(200, 200, 200, 0.3);
+    transition: 1s ;
+    opacity: 1;
+}
+.Article:hover #discription{
+    opacity: 0.9;
+    transition: 2s;
+}
+.short-discr{
+    display:flex;
+    border-radius: 0px 0px 2px 10px;
+    
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 1.5vw;
+    position: absolute;
+    margin-top: -2vw;
+    background-color:#eee;
+    height:2vw;
+    width:23vw;
+    padding-left: 1vw;
+    padding-top:0.2vw;
+    padding-right: 1vw;
+}

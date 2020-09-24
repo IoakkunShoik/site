@@ -1,20 +1,32 @@
 body{
-    background-color: aliceblue;
+    background-color: #111;
     margin: 0;
     padding:0;
     font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   
+}
+.hat a{
+    color: #f9aa44;
+    text-decoration: none;
 }
 .hat{
+    position: fixed;
+    z-index: 1000;
     display: flex;
     justify-content: center;
+    align-self: flex-start;
     flex-direction: row;
     align-items: center;
     width: 100%;
     height: 3vw;
-    background-color: #444444;
-    color: #ffaa00;
+    background-color: #222;
+    color: #f9aa44;
     font-size: 2vw;
     padding: 0;
+    box-shadow: 0px 0px 5px 0px black;
 }
 .button{
 
@@ -29,5 +41,181 @@ body{
     color: rgba(0,0,0,0);
     flex-grow: 1;
     margin: 0;
+    margin-left: 0.5vw;
     padding: 0;
+}
+.content{
+    margin-top: 3vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: 0px;
+}
+.empty{
+    width: 100vw;
+    height: 100%;
+    flex-grow: 1;
+}
+.footer{
+    width: 100vw;
+    flex-grow: 1;
+}
+.buttonwpoint{
+    line-height: 0.5vw;
+    text-align: center;
+
+}
+.button{
+    cursor: pointer;
+    user-select: none;
+}
+.pages{
+    margin-top: 1vw;
+    width: 100%;
+    flex-grow: 100;
+}
+.searchform{
+    transition: 1;
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 3vw;
+    background-color: #333;
+    height: 2.2vw;
+    line-height: 2vw;
+    width: 16vw;
+    border-radius: 0px 0px 12px 12px;
+    
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchform form{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin:0px;
+    font-size: 2vw;
+}
+.searchform form input[type='image']{
+    
+    height: 1.5vw;
+    border-radius: 100px;
+    background-color:#444;
+    border: 1px #f9aa44 solid;
+    box-shadow: 0px 0px 5px 0px black;
+    margin-left:0.5vw;
+    font-size: 1vw;
+    background-size: 1vw;
+}
+input[type='text']{
+    font-size: 1vw;
+    box-sizing: border-box;
+    padding: 0.2vw;
+    width: 12vw;
+    height: 1.5vw;
+    border-radius: 12px;
+    color: #f9aa44;
+    background-color:#444;
+    box-shadow: 0px 0px 5px 0px black inset;
+    border: 1px #f9aa44 solid;
+}
+
+.filterform{
+    transition: 1;
+    display: none;
+    opacity: 0;
+    position: fixed;
+    width: 50vw;
+    background-color:rgba(34,34,34,0.9);
+    z-index: 999;
+    top:3vw;
+    color: #f9aa44;
+    font-family: 'Philosopher', sans-serif;
+    justify-content: center;
+    text-align: flex-start;
+    border-radius: 0vw 0vw 2vw 2vw;
+    font-size: 2vw;
+}
+.filterform td{
+    color: #f9aa44;
+    user-select: none;
+    
+}
+table:nth-child(2n){
+    background-color: black;
+}
+.filterform table{
+    display:inline-block;
+}
+input[type='submit']{
+    border-radius: 100px;
+    background-color:#444;
+    border: 1px #f9aa44 solid;
+    box-shadow: 0px 0px 5px 0px black;
+    margin-left:0.5vw;
+    font-size: 1vw;
+    background-size: 1vw;
+    box-sizing: border-box;
+    padding: 0.4vw;
+    color: #f9aa44;
+    font-family: 'Philosopher', sans-serif;
+}
+input[type='radio']{
+    display: none;
+}
+tr{
+    height: 3vw;
+}
+td{
+    background-color:rgba(22,22,22,0.5);
+    text-align: center;
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+td:nth-child(2n){
+    border-left:2vw transparent solid;
+    border-right: 2vw transparent solid;
+    background-color:rgba(34,34,34,0.5);
+}
+input[type='radio'] + label {
+    
+    border-radius: 100px;
+    background-color:#333;
+    border: 1px #f9aa44 solid;
+    box-shadow: 0px 0px 5px 0px black;
+    margin-left:0.5vw;
+    font-size: 1vw;
+    background-size: 1vw;
+    box-sizing: border-box;
+    padding: 0.4vw;
+    color: #f9aa44;
+    font-family: 'Philosopher', sans-serif;
+}
+input[type='radio']:checked + label {
+    box-shadow: 0px 0px 3px 0px #f9aa44 inset;
+    background-color:222;
+}
+.pages input[type='submit']{
+    width: 2vw;
+    height: 2vw;
+}
+input[type='number']{
+    font-size: 1vw;
+    box-sizing: border-box;
+    padding: 0.2vw;
+    width: 12vw;
+    height: 1.5vw;
+    border-radius: 12px;
+    color: #f9aa44;
+    background-color:#444;
+    box-shadow: 0px 0px 5px 0px black inset;
+    border: 1px #f9aa44 solid;
+}
+.shop{
+    display: none;
 }

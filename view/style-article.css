@@ -1,0 +1,84 @@
+
+.article{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .header{
+        width: 100%;
+        flex-grow: 1;
+        color: #f9aa44;
+        font-family: 'Philosopher', sans-serif;
+    }
+    .right-panel{
+        flex-grow:1;
+        margin-left: 1vw;
+        width: 10vw;
+    }
+    .left-panel{
+        flex-grow:1;
+        width: 35vw;
+    }
+    .chars{
+        border-radius: 5px;
+        background: white;
+        padding: 1vw;
+        box-sizing: border-box;
+    }
+    .paying{
+        border-radius: 5px;
+        background: white;
+        margin-top: 1vw;
+    }
+    .magniflier{
+        content: '1123';
+        background: grey;
+        height: 30vw;
+        border: 0.3vw solid white;
+        border-radius: 5px;
+    }
+    .view-panel{
+        background: white;
+        margin-top: 1vw;
+        border-radius: 5px;
+    }
+    .discription{
+        
+        border-radius: 5px;
+        margin-top:1vw;
+        background: white;
+    }
+    #loupe{
+        position: absolute;
+        width: 30vw;
+        height:30vw;
+        right: 1vw;
+        background-color:white;
+        background-repeat:no-repeat;
+        background-position:center;
+        display: none;
+        border: 0.3vw white dotted;
+        border-radius: 900px;
+        box-shadow: -2px 2px 5px 2px black;
+
+    }
+    .self-image:hover #loupe{
+        display:block;
+    }
+    .imgs{
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+        background-size: cover;
+    }
+
+    img.demo { float:right; }
+.demo { 
+     position:relative; 
+     top:-120px; 
+     }
+
+     .loupe{
+         background-size: 600%;
+     }
+      
